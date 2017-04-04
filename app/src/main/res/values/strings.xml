@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CalcClient</string>
+    <string name ="add_one">加数1： </string>
+    <string name ="add_two">加数2： </string>
+    <string name="add_start">求和</string>
+
+</resources>
