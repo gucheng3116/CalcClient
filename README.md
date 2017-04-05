@@ -7,6 +7,7 @@
 &emsp;&emsp;Client和Server在进程间通讯时分别做哪些事情？
 
 &emsp;&emsp;Client:调用Server提供的接口函数，传递参数给Server，接收Server返回的结果。
+
 &emsp;&emsp; Server：对接收到的Client的参数进行处理，为Client实现接口函数。
 
 下面我们来举一个例子：
