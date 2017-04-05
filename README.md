@@ -5,6 +5,7 @@
 &emsp;&emsp;Android跨进程通信，由四大部分组成，分别是Client、Server、Service Manager和Binder驱动程序。其中Service Manager和Binder驱动程序系统已经为我们实现好，用户只需要按照规范实现Client和Server就可以了。
 
 &emsp;&emsp;Client和Server在进程间通讯时分别做哪些事情？
+
 &emsp;&emsp;Client:调用Server提供的接口函数，传递参数给Server，接收Server返回的结果。
 &emsp;&emsp; Server：对接收到的Client的参数进行处理，为Client实现接口函数。
 
