@@ -10,15 +10,16 @@
 
 &emsp;&emsp; Server：对接收到的Client的参数进行处理，为Client实现接口函数。
 
-下面我们来举一个例子：
-    &emsp;&emsp;该例子中我们一共编写两个应用程序，一个是Client端，一个是Server端。这两个应用程序实现一个加法运算，在Client端传递两个数给Server端，Server端对这两个数进行相加，并将结果返回给Client端。
+**下面我们来举一个例子：**  
+&emsp;&emsp;该例子中我们一共编写两个应用程序，一个是Client端，一个是Server端。这两个应用程序实现一个加法运算，在Client端传递两个数给Server端，Server端对这两个数进行相加，并将结果返回给Client端。
     &emsp;&emsp;Client界面如下图，在EditText中输入加数，点击求和按钮，将数据传递到Server端，并获取Server端计算的结果后显示在求和按钮的下方。
 ![Client端界面](http://img.blog.csdn.net/20170404221143707?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VjaGVuZzMxMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
    Server端界面如下：    
 &emsp;&emsp;![这里写图片描述](http://img.blog.csdn.net/20170404221408757?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VjaGVuZzMxMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
-&emsp;&emsp;Server端实现了计算Client端传递参数的接口，以及Client端获取计算结果的接口。同时，Server端也将结果显示到界面上，这样就可以直观地看到两个应用程序有相互影响，而不是说Client端自己计算了结果。
+&emsp;&emsp;Server端实现了计算Client端传递参数的接口，以及Client端获取计算结果的接口。同时，Server端也将结果显示到界面上，这样就可以直观地看到两个应用程序有相互影响，而不是说Client端自己计算了结果。  
+
 **代码实现步骤如下：**
 
 **1.编写.aidl文件CalcMethods.aidl：**
@@ -86,7 +87,7 @@ private static CalcMethods.Stub mCalcMethod = new         CalcMethods.Stub() {
 
 **4.编写Client端的代码：**
 
-    &emsp;&emsp;实例化ServiceConnection对象mServiceConnection。该对象在调用bindService绑定服务的时候会用到。链接成功返回一个类型为CalcMethods的对象mCalcMethods，该类型就是我们定义的AIDL类。通过该变量我们可以访问在Server端实现的方法。
+  &emsp;&emsp;实例化ServiceConnection对象mServiceConnection。该对象在调用bindService绑定服务的时候会用到。链接成功返回一个类型为CalcMethods的对象mCalcMethods，该类型就是我们定义的AIDL类。通过该变量我们可以访问在Server端实现的方法。
     
 ```
 private ServiceConnection mServiceConnection = new ServiceConnection() {
@@ -129,8 +130,10 @@ private ServiceConnection mServiceConnection = new ServiceConnection() {
         });
 ```
 	  
-完整代码已经上传到github:
-Server端：https://github.com/gucheng3116/CalcServer
+完整代码已经上传到github:  
+
+Server端：https://github.com/gucheng3116/CalcServer  
+
 Client端：https://github.com/gucheng3116/CalcClient
 
 &emsp;&emsp;有问题可以给我留言，或者发送邮件到459843397@qq.com
