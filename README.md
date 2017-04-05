@@ -20,6 +20,7 @@
 
 &emsp;&emsp;Server端实现了计算Client端传递参数的接口，以及Client端获取计算结果的接口。同时，Server端也将结果显示到界面上，这样就可以直观地看到两个应用程序有相互影响，而不是说Client端自己计算了结果。
 **代码实现步骤如下：**
+
 **1.编写.aidl文件CalcMethods.aidl：**
 这里设计了以下两个接口函数：
     &emsp;&emsp;addFunc：传递两个参数给Server端；
@@ -84,7 +85,9 @@ private static CalcMethods.Stub mCalcMethod = new         CalcMethods.Stub() {
 ```
 
 **4.编写Client端的代码：**
+
     &emsp;&emsp;实例化ServiceConnection对象mServiceConnection。该对象在调用bindService绑定服务的时候会用到。链接成功返回一个类型为CalcMethods的对象mCalcMethods，该类型就是我们定义的AIDL类。通过该变量我们可以访问在Server端实现的方法。
+    
 ```
 private ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
