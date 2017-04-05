@@ -12,8 +12,8 @@
 
 **下面我们来举一个例子：**  
 &emsp;&emsp;该例子中我们一共编写两个应用程序，一个是Client端，一个是Server端。这两个应用程序实现一个加法运算，在Client端传递两个数给Server端，Server端对这两个数进行相加，并将结果返回给Client端。
-    &emsp;&emsp;Client界面如下图，在EditText中输入加数，点击求和按钮，将数据传递到Server端，并获取Server端计算的结果后显示在求和按钮的下方。
-![Client端界面](http://img.blog.csdn.net/20170404221143707?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VjaGVuZzMxMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+  <center>
+<img src="http://img.blog.csdn.net/20170404221143707?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VjaGVuZzMxMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" height="40%" width="40%" alt=""/></center>
 
    Server端界面如下：    
 &emsp;&emsp;![这里写图片描述](http://img.blog.csdn.net/20170404221408757?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3VjaGVuZzMxMTY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
