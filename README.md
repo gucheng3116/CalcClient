@@ -1,10 +1,13 @@
 # CalcClient
     
 &emsp;&emsp;Android中通过Binder机制实现跨进程通信，Binder机制比较典型的例子就是AIDL Service。AIDL跨进程通信的实现在Android中是比较重要的知识点，同时也有一定的难度。本文通过一个具体简单的栗子来讲述如何实现跨进程通信。
+
 &emsp;&emsp;Android跨进程通信，由四大部分组成，分别是Client、Server、Service Manager和Binder驱动程序。其中Service Manager和Binder驱动程序系统已经为我们实现好，用户只需要按照规范实现Client和Server就可以了。
-Client和Server在进程间通讯时分别做哪些事情？
-    &emsp;&emsp;Client:调用Server提供的接口函数，传递参数给Server，接收Server返回的结果。
-   &emsp;&emsp; Server：对接收到的Client的参数进行处理，为Client实现接口函数。
+
+&emsp;&emsp;Client和Server在进程间通讯时分别做哪些事情？
+&emsp;&emsp;Client:调用Server提供的接口函数，传递参数给Server，接收Server返回的结果。
+&emsp;&emsp; Server：对接收到的Client的参数进行处理，为Client实现接口函数。
+
 下面我们来举一个例子：
     &emsp;&emsp;该例子中我们一共编写两个应用程序，一个是Client端，一个是Server端。这两个应用程序实现一个加法运算，在Client端传递两个数给Server端，Server端对这两个数进行相加，并将结果返回给Client端。
     &emsp;&emsp;Client界面如下图，在EditText中输入加数，点击求和按钮，将数据传递到Server端，并获取Server端计算的结果后显示在求和按钮的下方。
